@@ -1,0 +1,1 @@
+<img src="{{asset('logo/deep.png')}}" width="200px">
