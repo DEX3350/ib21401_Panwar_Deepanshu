@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Tweet\Update;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\UpdateRequest;
+use App\Http\Request\Tweet\UpdateRequest;
 use App\Models\Tweet;
 use Illuminate\Http\request;
 
