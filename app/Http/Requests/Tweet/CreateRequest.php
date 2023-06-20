@@ -16,7 +16,7 @@ class CreateRequest extends FormRequest
 
     public function tweet(): string
     {
-        return $this->input('tweet');
+        return $this->input('tweets');
     }
 
     /**
@@ -27,7 +27,7 @@ class CreateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'tweet' => 'required|max:140'
+            'tweets' => 'required|max:140'
         ];
     }
 }

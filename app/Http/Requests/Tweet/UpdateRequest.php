@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Tweet;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Models\Tweet;
 
 class UpdateRequest extends FormRequest
 {
