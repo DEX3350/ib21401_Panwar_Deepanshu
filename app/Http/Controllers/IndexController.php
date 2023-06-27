@@ -16,4 +16,5 @@ class IndexController extends Controller
             ->with('tweets',$tweets);
            
     }
+    
 }

@@ -12,14 +12,14 @@
         <a href="{{ route('tweet.index') }}"> 戻る </a>
         <p>投稿フォーム</p>
         @if (session('feedback.success'))
-            <p style="color:seagreen)">{{ session('feedback.success') }}</p>
+            <p style="color:darkgreen">{{ session('feedback.success') }}</p>
         @endif
         <form action="{{ route('tweet.update.put', ['tweetId' => $tweets->id]) }}" method="post">
             @method('PUT')
             @csrf
             <label for="tweet-content">つぶやき</label>
             <span>140文字まで</span>
-            <textarea name="tweet" id="tweet-content" type="text" placeholder="つぶやきを入力">{{ $tweets->content }}</textarea>
+            <textarea name="tweets" id="tweet-content" type="text" placeholder="つぶやきを入力">{{ $tweets->content }}</textarea>
             @error('tweets')
                 <p style= "color:red">{{ $message }}</p>
             @enderror
