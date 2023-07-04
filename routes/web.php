@@ -31,7 +31,7 @@ Route::middleware('auth')->group(function () {
 // Route::get('/post','\App\Http\Controllers\PostsController@index');
 Route::get('/post/{id}','\App\Http\Controllers\PostsController@index');
 Route::get('/tweet','\App\Http\Controllers\IndexController@a')->name('tweet.index');
-Route::post('/tweet/create','\App\Http\Controllers\Tweet\CreateController@b')->name('tweet.create');
+Route::post('/tweet/create','\App\Http\Controllers\Tweet\CreateController@b')->middleware('auth')->name('tweet.create');
 
 
 Route::get('/tweet/update/{tweetId}','\App\Http\Controllers\Tweet\Update\IndexController@c')
