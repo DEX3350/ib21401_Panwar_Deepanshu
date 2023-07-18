@@ -4,11 +4,16 @@
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
+           {{-- <!-- Username -->
+           <div>
+                <x-input-label for="username" :value="__('usename')" />
+                <x-text-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')"  />
+           </div> --}}
 
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="email" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 

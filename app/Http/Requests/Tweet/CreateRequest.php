@@ -30,4 +30,8 @@ class CreateRequest extends FormRequest
             'tweets' => 'required|max:140'
         ];
     }
+    public function user_Id(): int{
+        return $this->user()->id;
+    }
+
 }
